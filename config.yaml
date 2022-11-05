@@ -1,0 +1,14 @@
+# For docs, see: https://docs.fedoraproject.org/en-US/fedora-coreos/fcct-config/
+
+variant: fcos
+version: 1.4.0
+
+passwd:
+  users:
+    - name: core
+      groups:
+        - docker
+        - wheel
+        - sudo
+      ssh_authorized_keys:
+        - $ssh_public_key
